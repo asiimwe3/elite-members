@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Messages | Elite Members</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-header"><img src="https://img.icons8.com/color/48/crown.png" class="logo-icon" /><span class="logo-text">Elite Members</span><span class="close-btn" onclick="toggleSidebar()"><i class="fa fa-times"></i></span></div>
+    <p class="nav-label">NAVIGATION</p>
+    <nav>
+      <a href="../index.html" class="nav-item"><i class="fa fa-home"></i> Home</a>
+      <a href="feed.html" class="nav-item"><i class="fa fa-newspaper"></i> Feed</a>
+      <a href="discover.html" class="nav-item"><i class="fa fa-search"></i> Discover</a>
+      <a href="channels.html" class="nav-item"><i class="fa fa-chart-line"></i> Channels</a>
+      <a href="community.html" class="nav-item"><i class="fa fa-users"></i> Community</a>
+      <a href="events.html" class="nav-item"><i class="fa fa-calendar"></i> Events</a>
+      <a href="messages.html" class="nav-item active"><i class="fa fa-comment"></i> Messages</a>
+      <a href="marketplace.html" class="nav-item"><i class="fa fa-store"></i> Marketplace</a>
+      <a href="creatorlab.html" class="nav-item"><i class="fa fa-flask"></i> Creator Lab</a>
+      <a href="analytics.html" class="nav-item"><i class="fa fa-chart-bar"></i> Analytics</a>
+      <a href="collaborations.html" class="nav-item"><i class="fa fa-handshake"></i> Collaborations</a>
+    </nav>
+    <div class="sidebar-user"><img src="https://i.pravatar.cc/40?img=3" class="avatar-sm" /><div><p class="user-name">Raise Up</p><p class="user-email">upraise256@gmail.com</p></div><i class="fa fa-sign-out-alt logout-icon"></i></div>
+  </div>
+  <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+  <header class="topnav"><button class="menu-btn" onclick="toggleSidebar()"><i class="fa fa-bars"></i></button><img src="https://img.icons8.com/color/48/crown.png" class="nav-logo" /><img src="https://i.pravatar.cc/40?img=3" class="avatar-top" /></header>
+
+  <div class="page-content">
+    <p class="page-title">Messages</p>
+    <div class="msg-card"><img src="https://i.pravatar.cc/50?img=5" class="msg-avatar" /><div><p class="msg-name">Alex Mwangi</p><p class="msg-preview">Hey, did you see the market update?</p></div><div class="msg-time">2m ago<div class="msg-badge">3</div></div></div>
+    <div class="msg-card"><img src="https://i.pravatar.cc/50?img=8" class="msg-avatar" /><div><p class="msg-name">Sarah Nakato</p><p class="msg-preview">Great content on the Creator Lab!</p></div><div class="msg-time">15m ago</div></div>
+    <div class="msg-card"><img src="https://i.pravatar.cc/50?img=12" class="msg-avatar" /><div><p class="msg-name">James Odhiambo</p><p class="msg-preview">Let's collaborate on a new project</p></div><div class="msg-time">1h ago<div class="msg-badge">1</div></div></div>
+    <div class="msg-card"><img src="https://i.pravatar.cc/50?img=15" class="msg-avatar" /><div><p class="msg-name">Amara Diallo</p><p class="msg-preview">Loved your latest post 🔥</p></div><div class="msg-time">3h ago</div></div>
+  </div>
+
+  <nav class="bottom-nav">
+    <a href="../index.html" class="bn-item"><i class="fa fa-home"></i><span>Home</span></a>
+    <a href="feed.html" class="bn-item"><i class="fa fa-newspaper"></i><span>Feed</span></a>
+    <a href="feed.html" class="bn-item plus-btn"><i class="fa fa-plus"></i></a>
+    <a href="channels.html" class="bn-item"><i class="fa fa-chart-line"></i><span>Channels</span></a>
+    <a href="profile.html" class="bn-item"><i class="fa fa-user"></i><span>Profile</span></a>
+  </nav>
+  <script src="../js/app.js"></script>
+</body>
+</html>

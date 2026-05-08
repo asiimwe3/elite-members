@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Discover | Elite Members</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-header"><img src="https://img.icons8.com/color/48/crown.png" class="logo-icon" /><span class="logo-text">Elite Members</span><span class="close-btn" onclick="toggleSidebar()"><i class="fa fa-times"></i></span></div>
+    <p class="nav-label">NAVIGATION</p>
+    <nav>
+      <a href="../index.html" class="nav-item"><i class="fa fa-home"></i> Home</a>
+      <a href="feed.html" class="nav-item"><i class="fa fa-newspaper"></i> Feed</a>
+      <a href="discover.html" class="nav-item active"><i class="fa fa-search"></i> Discover</a>
+      <a href="channels.html" class="nav-item"><i class="fa fa-chart-line"></i> Channels</a>
+      <a href="community.html" class="nav-item"><i class="fa fa-users"></i> Community</a>
+      <a href="events.html" class="nav-item"><i class="fa fa-calendar"></i> Events</a>
+      <a href="messages.html" class="nav-item"><i class="fa fa-comment"></i> Messages</a>
+      <a href="marketplace.html" class="nav-item"><i class="fa fa-store"></i> Marketplace</a>
+      <a href="creatorlab.html" class="nav-item"><i class="fa fa-flask"></i> Creator Lab</a>
+      <a href="analytics.html" class="nav-item"><i class="fa fa-chart-bar"></i> Analytics</a>
+      <a href="collaborations.html" class="nav-item"><i class="fa fa-handshake"></i> Collaborations</a>
+    </nav>
+    <div class="sidebar-user"><img src="https://i.pravatar.cc/40?img=3" class="avatar-sm" /><div><p class="user-name">Raise Up</p><p class="user-email">upraise256@gmail.com</p></div><i class="fa fa-sign-out-alt logout-icon"></i></div>
+  </div>
+  <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+  <header class="topnav"><button class="menu-btn" onclick="toggleSidebar()"><i class="fa fa-bars"></i></button><img src="https://img.icons8.com/color/48/crown.png" class="nav-logo" /><img src="https://i.pravatar.cc/40?img=3" class="avatar-top" /></header>
+
+  <div class="page-content">
+    <p class="page-title">Discover</p>
+    <div class="search-bar"><i class="fa fa-search"></i><input type="text" placeholder="Search creators, topics, events..." /></div>
+    <p style="font-size:14px;font-weight:600;margin-bottom:10px;">🔥 Trending Topics</p>
+    <div>
+      <span class="trending-tag">#Trading2026</span>
+      <span class="trending-tag">#EliteCreators</span>
+      <span class="trending-tag">#AIBusiness</span>
+      <span class="trending-tag">#AfricanTech</span>
+      <span class="trending-tag">#PassiveIncome</span>
+      <span class="trending-tag">#CryptoAfrica</span>
+      <span class="trending-tag">#CreatorEconomy</span>
+      <span class="trending-tag">#FinanceAfrica</span>
+    </div>
+    <p style="font-size:14px;font-weight:600;margin:16px 0 10px;">👑 Top Creators</p>
+    <div class="member-card"><img src="https://i.pravatar.cc/52?img=3" class="member-avatar" /><div><p class="member-name">Trader Derick Asiimwe</p><p class="member-role">Founder & CEO · 3.2K followers</p></div><button class="connect-btn">Follow</button></div>
+    <div class="member-card"><img src="https://i.pravatar.cc/52?img=5" class="member-avatar" /><div><p class="member-name">Alex Mwangi</p><p class="member-role">Finance Expert · 1.8K followers</p></div><button class="connect-btn">Follow</button></div>
+    <div class="member-card"><img src="https://i.pravatar.cc/52?img=8" class="member-avatar" /><div><p class="member-name">Sarah Nakato</p><p class="member-role">Tech Creator · 900 followers</p></div><button class="connect-btn">Follow</button></div>
+  </div>
+
+  <nav class="bottom-nav">
+    <a href="../index.html" class="bn-item"><i class="fa fa-home"></i><span>Home</span></a>
+    <a href="feed.html" class="bn-item"><i class="fa fa-newspaper"></i><span>Feed</span></a>
+    <a href="feed.html" class="bn-item plus-btn"><i class="fa fa-plus"></i></a>
+    <a href="channels.html" class="bn-item"><i class="fa fa-chart-line"></i><span>Channels</span></a>
+    <a href="profile.html" class="bn-item"><i class="fa fa-user"></i><span>Profile</span></a>
+  </nav>
+  <script src="../js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feed | Elite Members</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <img src="https://img.icons8.com/color/48/crown.png" class="logo-icon" />
+      <span class="logo-text">Elite Members</span>
+      <span class="close-btn" onclick="toggleSidebar()"><i class="fa fa-times"></i></span>
+    </div>
+    <p class="nav-label">NAVIGATION</p>
+    <nav>
+      <a href="../index.html" class="nav-item"><i class="fa fa-home"></i> Home</a>
+      <a href="feed.html" class="nav-item active"><i class="fa fa-newspaper"></i> Feed</a>
+      <a href="discover.html" class="nav-item"><i class="fa fa-search"></i> Discover</a>
+      <a href="channels.html" class="nav-item"><i class="fa fa-chart-line"></i> Channels</a>
+      <a href="community.html" class="nav-item"><i class="fa fa-users"></i> Community</a>
+      <a href="events.html" class="nav-item"><i class="fa fa-calendar"></i> Events</a>
+      <a href="messages.html" class="nav-item"><i class="fa fa-comment"></i> Messages</a>
+      <a href="marketplace.html" class="nav-item"><i class="fa fa-store"></i> Marketplace</a>
+      <a href="creatorlab.html" class="nav-item"><i class="fa fa-flask"></i> Creator Lab</a>
+      <a href="analytics.html" class="nav-item"><i class="fa fa-chart-bar"></i> Analytics</a>
+      <a href="collaborations.html" class="nav-item"><i class="fa fa-handshake"></i> Collaborations</a>
+    </nav>
+    <div class="sidebar-user">
+      <img src="https://i.pravatar.cc/40?img=3" class="avatar-sm" />
+      <div><p class="user-name">Raise Up</p><p class="user-email">upraise256@gmail.com</p></div>
+      <i class="fa fa-sign-out-alt logout-icon"></i>
+    </div>
+  </div>
+  <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+  <header class="topnav">
+    <button class="menu-btn" onclick="toggleSidebar()"><i class="fa fa-bars"></i></button>
+    <img src="https://img.icons8.com/color/48/crown.png" class="nav-logo" />
+    <img src="https://i.pravatar.cc/40?img=3" class="avatar-top" />
+  </header>
+
+  <div class="page-content">
+    <!-- Stories -->
+    <div class="story-row">
+      <div class="story-card">
+        <img src="https://i.pravatar.cc/56?img=3" class="story-avatar" />
+        <div class="story-plus"><i class="fa fa-plus"></i></div>
+        <p class="story-label">Create Story</p>
+      </div>
+      <div class="story-card">
+        <img src="https://i.pravatar.cc/56?img=5" class="story-avatar" />
+        <p class="story-label">Alex</p>
+      </div>
+      <div class="story-card">
+        <img src="https://i.pravatar.cc/56?img=8" class="story-avatar" />
+        <p class="story-label">Maria</p>
+      </div>
+      <div class="story-card">
+        <img src="https://i.pravatar.cc/56?img=12" class="story-avatar" />
+        <p class="story-label">John</p>
+      </div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="feed-tabs">
+      <button class="feed-tab"><i class="fa fa-chart-line"></i> Trending</button>
+      <button class="feed-tab active"><i class="fa fa-clock"></i> Latest</button>
+      <button class="feed-tab"><i class="fa fa-user-friends"></i> Following</button>
+    </div>
+
+    <!-- Categories -->
+    <div class="categories">
+      <span class="cat-chip active">All</span>
+      <span class="cat-chip">📈 Finance</span>
+      <span class="cat-chip">💻 Tech</span>
+      <span class="cat-chip">🌿 Lifestyle</span>
+      <span class="cat-chip">🎨 Creative</span>
+    </div>
+
+    <!-- AI Recommended -->
+    <div class="ai-label">
+      <i class="fa fa-wand-magic-sparkles" style="color:#7c3aed"></i>
+      Recommended For You
+      <span class="ai-badge">AI Powered</span>
+    </div>
+
+    <div class="post-card">
+      <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400" class="post-img" />
+      <div class="post-info">
+        <p class="post-views">4890 views</p>
+        <p class="post-title">Trading Setup for Beginners 2026 | Complete Guide</p>
+      </div>
+    </div>
+
+    <div class="post-card">
+      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=400" class="post-img" />
+      <div class="post-info">
+        <p class="post-views">2340 views</p>
+        <p class="post-title">Top 5 Tech Trends Shaping the Future in 2026</p>
+      </div>
+    </div>
+
+    <div class="post-card">
+      <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400" class="post-img" />
+      <div class="post-info">
+        <p class="post-views">1890 views</p>
+        <p class="post-title">How to Build Passive Income Streams as a Creator</p>
+      </div>
+    </div>
+  </div>
+
+  <nav class="bottom-nav">
+    <a href="../index.html" class="bn-item"><i class="fa fa-home"></i><span>Home</span></a>
+    <a href="feed.html" class="bn-item active"><i class="fa fa-newspaper"></i><span>Feed</span></a>
+    <a href="feed.html" class="bn-item plus-btn"><i class="fa fa-plus"></i></a>
+    <a href="channels.html" class="bn-item"><i class="fa fa-chart-line"></i><span>Channels</span></a>
+    <a href="profile.html" class="bn-item"><i class="fa fa-user"></i><span>Profile</span></a>
+  </nav>
+  <script src="../js/app.js"></script>
+</body>
+</html>

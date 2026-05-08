@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elite Members</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <img src="https://img.icons8.com/color/48/crown.png" class="logo-icon" />
+      <span class="logo-text">Elite Members</span>
+      <span class="close-btn" onclick="toggleSidebar()"><i class="fa fa-times"></i></span>
+    </div>
+    <p class="nav-label">NAVIGATION</p>
+    <nav>
+      <a href="index.html" class="nav-item active"><i class="fa fa-home"></i> Home</a>
+      <a href="pages/feed.html" class="nav-item"><i class="fa fa-newspaper"></i> Feed</a>
+      <a href="pages/discover.html" class="nav-item"><i class="fa fa-search"></i> Discover</a>
+      <a href="pages/channels.html" class="nav-item"><i class="fa fa-chart-line"></i> Channels</a>
+      <a href="pages/community.html" class="nav-item"><i class="fa fa-users"></i> Community</a>
+      <a href="pages/events.html" class="nav-item"><i class="fa fa-calendar"></i> Events</a>
+      <a href="pages/messages.html" class="nav-item"><i class="fa fa-comment"></i> Messages</a>
+      <a href="pages/marketplace.html" class="nav-item"><i class="fa fa-store"></i> Marketplace</a>
+      <a href="pages/creatorlab.html" class="nav-item"><i class="fa fa-flask"></i> Creator Lab</a>
+      <a href="pages/analytics.html" class="nav-item"><i class="fa fa-chart-bar"></i> Analytics</a>
+      <a href="pages/collaborations.html" class="nav-item"><i class="fa fa-handshake"></i> Collaborations</a>
+    </nav>
+    <div class="sidebar-user">
+      <img src="https://i.pravatar.cc/40?img=3" class="avatar-sm" />
+      <div>
+        <p class="user-name">Raise Up</p>
+        <p class="user-email">upraise256@gmail.com</p>
+      </div>
+      <i class="fa fa-sign-out-alt logout-icon"></i>
+    </div>
+  </div>
+  <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+
+  <!-- Top Nav -->
+  <header class="topnav">
+    <button class="menu-btn" onclick="toggleSidebar()"><i class="fa fa-bars"></i></button>
+    <img src="https://img.icons8.com/color/48/crown.png" class="nav-logo" />
+    <img src="https://i.pravatar.cc/40?img=3" class="avatar-top" />
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>About Elite Members</h1>
+    <p>A revolutionary social platform combining creator tools, e-commerce, AI technology, and future-tech features to redefine how we connect, create, and preserve our legacy.</p>
+  </section>
+
+  <!-- Founder Card -->
+  <section class="founder-section">
+    <div class="founder-card">
+      <img src="https://i.pravatar.cc/300?img=3" class="founder-img" />
+      <div class="founder-info">
+        <h3 class="founder-name">Trader Derick Asiimwe</h3>
+        <p class="founder-title">Founder &amp; CEO — Elite Members</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features">
+    <h2>Platform Features</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <i class="fa fa-robot"></i>
+        <h4>AI Powered</h4>
+        <p>Smart recommendations tailored to your interests</p>
+      </div>
+      <div class="feature-card">
+        <i class="fa fa-store"></i>
+        <h4>Marketplace</h4>
+        <p>Buy and sell products within the community</p>
+      </div>
+      <div class="feature-card">
+        <i class="fa fa-flask"></i>
+        <h4>Creator Lab</h4>
+        <p>Build and launch your creative projects</p>
+      </div>
+      <div class="feature-card">
+        <i class="fa fa-chart-line"></i>
+        <h4>Analytics</h4>
+        <p>Track your growth and performance</p>
+      </div>
+      <div class="feature-card">
+        <i class="fa fa-users"></i>
+        <h4>Community</h4>
+        <p>Connect with like-minded elite members</p>
+      </div>
+      <div class="feature-card">
+        <i class="fa fa-handshake"></i>
+        <h4>Collaborations</h4>
+        <p>Partner with creators and businesses</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom Nav -->
+  <nav class="bottom-nav">
+    <a href="index.html" class="bn-item active"><i class="fa fa-home"></i><span>Home</span></a>
+    <a href="pages/feed.html" class="bn-item"><i class="fa fa-newspaper"></i><span>Feed</span></a>
+    <a href="pages/feed.html" class="bn-item plus-btn"><i class="fa fa-plus"></i></a>
+    <a href="pages/channels.html" class="bn-item"><i class="fa fa-chart-line"></i><span>Channels</span></a>
+    <a href="pages/profile.html" class="bn-item"><i class="fa fa-user"></i><span>Profile</span></a>
+  </nav>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
