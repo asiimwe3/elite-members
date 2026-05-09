@@ -1,13 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Elite Members</title>
+  <meta name="description" content="A revolutionary social platform combining creator tools, e-commerce, AI technology, and future-tech features." />
+  <meta name="theme-color" content="#2d2d8e" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="https://img.icons8.com/color/192/crown.png" />
   <link rel="stylesheet" href="css/style.css" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
 </head>
 <body>
+
+  <!-- Splash Screen -->
+  <div class="splash" id="splash">
+    <div class="splash-inner">
+      <img src="https://img.icons8.com/color/96/crown.png" class="splash-logo" />
+      <h1 class="splash-title">Elite Members</h1>
+      <p class="splash-tagline">Connect. Create. Conquer.</p>
+      <div class="splash-loader"><div class="loader-bar"></div></div>
+    </div>
+  </div>
+
   <!-- Sidebar -->
   <div class="sidebar" id="sidebar">
     <div class="sidebar-header">
@@ -29,6 +44,9 @@
       <a href="pages/analytics.html" class="nav-item"><i class="fa fa-chart-bar"></i> Analytics</a>
       <a href="pages/collaborations.html" class="nav-item"><i class="fa fa-handshake"></i> Collaborations</a>
     </nav>
+    <div class="sidebar-footer">
+      <button class="dark-toggle" onclick="toggleDark()"><i class="fa fa-moon"></i> Dark Mode</button>
+    </div>
     <div class="sidebar-user">
       <img src="https://i.pravatar.cc/40?img=3" class="avatar-sm" />
       <div>
@@ -44,20 +62,37 @@
   <header class="topnav">
     <button class="menu-btn" onclick="toggleSidebar()"><i class="fa fa-bars"></i></button>
     <img src="https://img.icons8.com/color/48/crown.png" class="nav-logo" />
-    <img src="https://i.pravatar.cc/40?img=3" class="avatar-top" />
+    <div style="display:flex;align-items:center;gap:10px;">
+      <button class="icon-btn" onclick="toggleDark()"><i class="fa fa-moon"></i></button>
+      <img src="https://i.pravatar.cc/40?img=3" class="avatar-top" />
+    </div>
   </header>
 
   <!-- Hero -->
-  <section class="hero">
-    <h1>About Elite Members</h1>
+  <section class="hero animate-fade">
+    <div class="hero-badge">✨ AI-Powered Platform</div>
+    <h1>About <span class="hero-highlight">Elite Members</span></h1>
     <p>A revolutionary social platform combining creator tools, e-commerce, AI technology, and future-tech features to redefine how we connect, create, and preserve our legacy.</p>
+    <div class="hero-btns">
+      <a href="pages/feed.html" class="btn-primary">Explore Feed</a>
+      <a href="pages/community.html" class="btn-secondary">Join Community</a>
+    </div>
+  </section>
+
+  <!-- Stats Bar -->
+  <section class="stats-bar animate-slide">
+    <div class="stat-item"><span class="stat-num">12K+</span><span class="stat-lbl">Members</span></div>
+    <div class="stat-item"><span class="stat-num">4.8K</span><span class="stat-lbl">Posts</span></div>
+    <div class="stat-item"><span class="stat-num">98%</span><span class="stat-lbl">Satisfaction</span></div>
+    <div class="stat-item"><span class="stat-num">50+</span><span class="stat-lbl">Countries</span></div>
   </section>
 
   <!-- Founder Card -->
-  <section class="founder-section">
+  <section class="founder-section animate-fade">
     <div class="founder-card">
       <img src="https://i.pravatar.cc/300?img=3" class="founder-img" />
       <div class="founder-info">
+        <div class="founder-badge">👑 Founder</div>
         <h3 class="founder-name">Trader Derick Asiimwe</h3>
         <p class="founder-title">Founder &amp; CEO — Elite Members</p>
       </div>
@@ -65,41 +100,90 @@
   </section>
 
   <!-- Features -->
-  <section class="features">
+  <section class="features animate-slide">
     <h2>Platform Features</h2>
     <div class="features-grid">
       <div class="feature-card">
-        <i class="fa fa-robot"></i>
+        <div class="feature-icon-wrap"><i class="fa fa-robot"></i></div>
         <h4>AI Powered</h4>
         <p>Smart recommendations tailored to your interests</p>
       </div>
       <div class="feature-card">
-        <i class="fa fa-store"></i>
+        <div class="feature-icon-wrap"><i class="fa fa-store"></i></div>
         <h4>Marketplace</h4>
         <p>Buy and sell products within the community</p>
       </div>
       <div class="feature-card">
-        <i class="fa fa-flask"></i>
+        <div class="feature-icon-wrap"><i class="fa fa-flask"></i></div>
         <h4>Creator Lab</h4>
         <p>Build and launch your creative projects</p>
       </div>
       <div class="feature-card">
-        <i class="fa fa-chart-line"></i>
+        <div class="feature-icon-wrap"><i class="fa fa-chart-line"></i></div>
         <h4>Analytics</h4>
         <p>Track your growth and performance</p>
       </div>
       <div class="feature-card">
-        <i class="fa fa-users"></i>
+        <div class="feature-icon-wrap"><i class="fa fa-users"></i></div>
         <h4>Community</h4>
         <p>Connect with like-minded elite members</p>
       </div>
       <div class="feature-card">
-        <i class="fa fa-handshake"></i>
+        <div class="feature-icon-wrap"><i class="fa fa-handshake"></i></div>
         <h4>Collaborations</h4>
         <p>Partner with creators and businesses</p>
       </div>
     </div>
   </section>
+
+  <!-- Membership Tiers -->
+  <section class="membership animate-fade">
+    <h2>Membership Plans</h2>
+    <div class="plans-grid">
+      <div class="plan-card">
+        <p class="plan-name">Free</p>
+        <p class="plan-price">$0<span>/mo</span></p>
+        <ul class="plan-features">
+          <li><i class="fa fa-check"></i> Basic feed access</li>
+          <li><i class="fa fa-check"></i> Community access</li>
+          <li><i class="fa fa-check"></i> 5 posts/month</li>
+        </ul>
+        <button class="plan-btn outline">Get Started</button>
+      </div>
+      <div class="plan-card featured">
+        <div class="plan-badge">Most Popular</div>
+        <p class="plan-name">Elite</p>
+        <p class="plan-price">$9<span>/mo</span></p>
+        <ul class="plan-features">
+          <li><i class="fa fa-check"></i> Unlimited posts</li>
+          <li><i class="fa fa-check"></i> Creator Lab access</li>
+          <li><i class="fa fa-check"></i> AI tools</li>
+          <li><i class="fa fa-check"></i> Analytics dashboard</li>
+          <li><i class="fa fa-check"></i> Elite badge</li>
+        </ul>
+        <button class="plan-btn">Join Elite</button>
+      </div>
+      <div class="plan-card">
+        <p class="plan-name">Business</p>
+        <p class="plan-price">$29<span>/mo</span></p>
+        <ul class="plan-features">
+          <li><i class="fa fa-check"></i> Everything in Elite</li>
+          <li><i class="fa fa-check"></i> Marketplace seller</li>
+          <li><i class="fa fa-check"></i> Sponsored posts</li>
+          <li><i class="fa fa-check"></i> Priority support</li>
+        </ul>
+        <button class="plan-btn outline">Go Business</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Install PWA Banner -->
+  <div class="pwa-banner" id="pwaBanner" style="display:none;">
+    <i class="fa fa-mobile-alt"></i>
+    <span>Install Elite Members as an app!</span>
+    <button onclick="installPWA()">Install</button>
+    <button onclick="document.getElementById('pwaBanner').style.display='none'" class="pwa-close">✕</button>
+  </div>
 
   <!-- Bottom Nav -->
   <nav class="bottom-nav">
