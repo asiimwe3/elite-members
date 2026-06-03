@@ -156,24 +156,41 @@
   <script>
     const BACKEND = 'https://derick-ai-775511bf.base44.app/functions/pesapalPay';
     let selectedPlan = 'business';
+    let customAmount = null;
     const planData = {
-      elite: { name: 'Elite Plan', price: '$9.00', amount: 9 },
-      business: { name: 'Business Plan', price: '$29.00', amount: 29 }
+      elite: { name: 'Elite Plan', price: '$15.00', amount: 15 },
+      business: { name: 'Business Plan', price: '$49.00', amount: 49 },
+      free: { name: 'Free Plan', price: '$0.00', amount: 0 }
     };
 
     function selectPlan(plan) {
       selectedPlan = plan;
       document.querySelectorAll('.plan-opt').forEach(el => el.classList.remove('selected'));
-      document.getElementById(`opt-${plan}`).classList.add('selected');
-      document.getElementById('summaryPlan').textContent = planData[plan].name;
-      document.getElementById('summaryPrice').textContent = planData[plan].price;
+      const el = document.getElementById(`opt-${plan}`);
+      if (el) el.classList.add('selected');
+      const pd = planData[plan] || planData['business'];
+      document.getElementById('summaryPlan').textContent = pd.name;
+      document.getElementById('summaryPrice').textContent = pd.price;
     }
 
-    // Pre-select from URL param
+    // Read URL params
     const urlParams = new URLSearchParams(window.location.search);
     const planParam = urlParams.get('plan');
-    if (planParam && planData[planParam]) selectPlan(planParam);
-    else selectPlan('business');
+    const amountParam = urlParams.get('amount');
+    const descParam = urlParams.get('desc');
+
+    if (planParam === 'custom' && amountParam) {
+      // Custom product/event purchase
+      customAmount = parseFloat(amountParam);
+      const descText = descParam ? decodeURIComponent(descParam) : 'Custom Purchase';
+      document.getElementById('summaryPlan').textContent = descText;
+      document.getElementById('summaryPrice').textContent = '$' + customAmount.toFixed(2);
+      selectedPlan = 'custom';
+    } else if (planParam && planData[planParam]) {
+      selectPlan(planParam);
+    } else {
+      selectPlan('business');
+    }
 
     async function initiatePayment() {
       const firstName = document.getElementById('firstName').value.trim();
@@ -201,6 +218,8 @@
           body: JSON.stringify({
             action: 'initiate',
             plan: selectedPlan,
+            amount: customAmount || undefined,
+            description: descParam ? decodeURIComponent(descParam) : undefined,
             email, phone, first_name: firstName, last_name: lastName
           })
         });
